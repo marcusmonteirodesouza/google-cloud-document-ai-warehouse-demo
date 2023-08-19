@@ -1,17 +1,4 @@
-locals {
-  roles = [
-    "roles/pubsub.publisher"
-  ]
-}
-
 data "google_storage_project_service_account" "gcs_sa" {
-}
-
-resource "google_project_iam_member" "gcs_sa" {
-  for_each = toset(local.roles)
-  project  = data.google_project.project.project_id
-  role     = each.value
-  member   = "serviceAccount:${data.google_storage_project_service_account.gcs_sa.email_address}"
 }
 
 resource "google_kms_crypto_key_iam_member" "gcs_sa_default_internal" {

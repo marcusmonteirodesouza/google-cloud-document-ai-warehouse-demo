@@ -46,31 +46,15 @@ resource "google_cloudfunctions2_function" "us_patent_process" {
         object = google_storage_bucket_object.cloud_function_code.name
       }
     }
-
-    environment_variables = {
-      GOOGLE_FUNCTION_SOURCE = "us_patent_process/main.py"
-    }
   }
 
   service_config {
-    ingress_settings      = "ALLOW_INTERNAL_ONLY"
     service_account_email = var.service_account
 
     environment_variables = {
       PROJECT_ID                   = data.google_project.project.project_id
       US_PATENT_PROCESSOR_ID       = var.us_patent_parser_processor_id
       US_PATENT_PROCESSOR_LOCATION = var.us_patent_parser_processor_location
-    }
-  }
-
-  event_trigger {
-    trigger_region        = var.region
-    event_type            = "google.cloud.storage.object.v1.finalized"
-    service_account_email = var.service_account
-
-    event_filters {
-      attribute = "bucket"
-      value     = google_storage_bucket.input.name
     }
   }
 }

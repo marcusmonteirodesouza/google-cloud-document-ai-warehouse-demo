@@ -1,5 +1,5 @@
-# terraform {
-#   backend "gcs" {
-#     # bucket = ""
-#   }
-# }
+terraform {
+  backend "gcs" {
+    bucket = "firmly-socially-holy-jay"
+  }
+}

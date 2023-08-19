@@ -1,5 +1,5 @@
-output "cloud_function_us_patent_process_input_bucket" {
-  value = module.cloud_function_us_patent_process.input_bucket
+output "cloud_function_us_patent_process_url" {
+  value = module.cloud_function_us_patent_process.url
 }
 
 output "terraform_tfvars_secret_id" {

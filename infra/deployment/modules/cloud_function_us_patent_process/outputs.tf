@@ -1,3 +1,3 @@
-output "input_bucket" {
-  value = google_storage_bucket.input.name
+output "url" {
+  value = google_cloudfunctions2_function.us_patent_process.url
 }

@@ -19,7 +19,6 @@ This process will:
 
 1. Comment out the entire contents of the `backend.tf` file.
 1. Run `terraform init`.
-1. Run `terraform apply -target=module.iam` and type `yes`.
 1. Run `terraform apply` and type `yes`.
 1. Uncomment the contents of the `backend.tf` file and set the `bucket` attribute to the value of the `tfstate_bucket` output.
 1. Run `terraform init` and type `yes`.

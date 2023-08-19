@@ -1,4 +1,3 @@
-import datetime
 from dataclasses import dataclass
 
 
@@ -8,9 +7,9 @@ class USPatent:
     application_number: int | None
     class_international: str | None
     class_us: str | None
-    filing_date: datetime.date | None
+    filing_date: str | None
     inventor_Line_1: str | None
     issuer: str | None
     patent_number: int | None
-    publication_date: datetime.date | None
+    publication_date: str | None
     title_line_1: str | None
