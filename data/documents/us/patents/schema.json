@@ -1,0 +1,115 @@
+{
+  "display_name": "US Patent",
+  "property_definitions": [
+    {
+      "name": "applicant_line1",
+      "display_name": "applicant_line1",
+      "is_repeatable": true,
+      "is_filterable": true,
+      "is_searchable": true,
+      "is_metadata": true,
+      "is_required": true,
+      "text_type_options": {},
+      "schema_sources": []
+    },
+    {
+      "name": "application_number",
+      "display_name": "application_number",
+      "is_repeatable": false,
+      "is_filterable": true,
+      "is_searchable": true,
+      "is_metadata": true,
+      "is_required": true,
+      "text_type_options": {},
+      "schema_sources": []
+    },
+    {
+      "name": "class_international",
+      "display_name": "class_international",
+      "is_repeatable": true,
+      "is_filterable": true,
+      "is_searchable": true,
+      "is_metadata": true,
+      "is_required": true,
+      "text_type_options": {},
+      "schema_sources": []
+    },
+    {
+      "name": "class_us",
+      "display_name": "class_us",
+      "is_repeatable": true,
+      "is_filterable": true,
+      "is_searchable": true,
+      "is_metadata": true,
+      "is_required": true,
+      "text_type_options": {},
+      "schema_sources": []
+    },
+    {
+      "name": "filing_date",
+      "display_name": "filing_date",
+      "is_repeatable": true,
+      "is_filterable": true,
+      "is_searchable": true,
+      "is_metadata": true,
+      "is_required": true,
+      "text_type_options": {},
+      "schema_sources": []
+    },
+    {
+      "name": "inventor_Line_1",
+      "display_name": "inventor_Line_1",
+      "is_repeatable": true,
+      "is_filterable": true,
+      "is_searchable": true,
+      "is_metadata": true,
+      "is_required": true,
+      "text_type_options": {},
+      "schema_sources": []
+    },
+    {
+      "name": "issuer",
+      "display_name": "issuer",
+      "is_repeatable": true,
+      "is_filterable": true,
+      "is_searchable": true,
+      "is_metadata": true,
+      "is_required": true,
+      "text_type_options": {},
+      "schema_sources": []
+    },
+    {
+      "name": "patent_number",
+      "display_name": "patent_number",
+      "is_repeatable": false,
+      "is_filterable": true,
+      "is_searchable": true,
+      "is_metadata": true,
+      "is_required": true,
+      "text_type_options": {},
+      "schema_sources": []
+    },
+    {
+      "name": "publication_date",
+      "display_name": "publication_date",
+      "is_repeatable": true,
+      "is_filterable": true,
+      "is_searchable": true,
+      "is_metadata": true,
+      "is_required": true,
+      "text_type_options": {},
+      "schema_sources": []
+    },
+    {
+      "name": "title_line_1",
+      "display_name": "title_line_1",
+      "is_repeatable": true,
+      "is_filterable": true,
+      "is_searchable": true,
+      "is_metadata": true,
+      "is_required": true,
+      "text_type_options": {},
+      "schema_sources": []
+    }
+  ]
+}
