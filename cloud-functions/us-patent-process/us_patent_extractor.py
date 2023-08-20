@@ -36,7 +36,7 @@ class USPatentExtractor:
 
         entities = process_document_response.document.entities
 
-        application_line_1_entity = next(
+        applicant_line_1_entity = next(
             entity for entity in entities if entity.type_ == "applicant_line_1"
         )
         application_number_entity = next(
@@ -65,7 +65,7 @@ class USPatentExtractor:
             entity for entity in entities if entity.type_ == "title_line_1"
         )
 
-        application_line1 = application_line_1_entity.mention_text
+        applicant_line1 = applicant_line_1_entity.mention_text
 
         application_number = (
             application_number_entity.normalized_value.text
@@ -103,7 +103,7 @@ class USPatentExtractor:
         title_line_1_entity = title_line_1_entity.mention_text
 
         return USPatent(
-            application_line1,
+            applicant_line1,
             application_number,
             class_international,
             class_us,

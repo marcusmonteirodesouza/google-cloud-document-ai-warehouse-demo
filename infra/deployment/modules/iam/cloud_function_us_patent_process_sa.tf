@@ -10,6 +10,9 @@ resource "google_project_iam_custom_role" "cloud_function_us_patent_process" {
   permissions = [
     "appengine.applications.get",
     "compute.backendServices.get",
+    "contentwarehouse.documentSchemas.get",
+    "contentwarehouse.documentSchemas.list",
+    "contentwarehouse.documents.create",
     "documentai.humanReviewConfigs.review",
     "documentai.operations.getLegacy",
     "documentai.processorVersions.processBatch",

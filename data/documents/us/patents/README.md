@@ -1,4 +1,4 @@
-## Labeled data 
+## Labeled data
 
 > gs://cloud-samples-data/documentai/codelabs/challenge/labeled
 

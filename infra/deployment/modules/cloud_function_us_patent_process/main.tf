@@ -1,4 +1,6 @@
 locals {
+  cloud_function_dir = "${path.module}/../../../../cloud-functions/us-patent-process"
+
   cloud_function_zip_path = "${path.module}/cloud-function-us-patent-process.zip"
 }
 
@@ -21,7 +23,7 @@ resource "google_storage_bucket" "cloud_function_code" {
 
 data "archive_file" "cloud_function_code" {
   type        = "zip"
-  source_dir  = "${path.module}/../../../../cloud-functions/us-patent-process"
+  source_dir  = local.cloud_function_dir
   output_path = local.cloud_function_zip_path
 }
 
@@ -53,8 +55,12 @@ resource "google_cloudfunctions2_function" "us_patent_process" {
 
     environment_variables = {
       PROJECT_ID                   = data.google_project.project.project_id
+      PROJECT_NUMBER               = data.google_project.project.number
       US_PATENT_PROCESSOR_ID       = var.us_patent_parser_processor_id
       US_PATENT_PROCESSOR_LOCATION = var.us_patent_parser_processor_location
+      DOC_AI_WAREHOUSE_REGION      = var.doc_ai_warehouse_region
+      DOC_AI_WAREHOUSE_USER_ID     = var.doc_ai_warehouse_ui_sa
+      US_PATENT_DOCUMENT_SCHEMA_ID = var.us_patent_document_schema_id
     }
   }
 }

@@ -13,11 +13,23 @@
 1. Run [`gcloud auth application-default login`](https://cloud.google.com/sdk/gcloud/reference/auth/application-default/login).
 1. Install [`terraform`](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli).
 
+### Configure the Document AI Warehouse web application
+
+1. Follow [this guide](https://cloud.google.com/document-warehouse/docs/administer-warehouse) to configure the Document AI Warehouse web application.
+1. Take note of the Service Account Email.
+1. Go to the Document AI Warehouse web application.
+1. Go to "Admin" -> "Schemas". Click "Add new".
+1. Name the schema "US Patent", copy and paste the [schema.json](./data/documents/us/patents/schema.json) into the JSON area and then click "Done".
+1. Go to "Admin" -> "Access". Click "Add new".
+1. Add the Service Account with type "User" and access "Document Admin".
+
 ### Deployment
 
 This process will:
 
+1. `cd` into the [infra/deployment](./infra/deployment) folder.
 1. Comment out the entire contents of the `backend.tf` file.
+1. Create a [`terraform.tfvars`](https://developer.hashicorp.com/terraform/language/values/variables#variable-definitions-tfvars-files) file and set the values of the variables.
 1. Run `terraform init`.
 1. Run `terraform apply` and type `yes`.
 1. Uncomment the contents of the `backend.tf` file and set the `bucket` attribute to the value of the `tfstate_bucket` output.

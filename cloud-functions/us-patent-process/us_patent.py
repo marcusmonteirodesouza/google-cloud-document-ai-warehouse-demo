@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 @dataclass
 class USPatent:
-    application_line1: str | None
+    applicant_line1: str | None
     application_number: int | None
     class_international: str | None
     class_us: str | None

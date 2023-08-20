@@ -17,3 +17,8 @@ variable "doc_ai_public_crypto_key_id" {
   type        = string
   description = " The Document AI public KMS crypto keys ID."
 }
+
+variable "doc_ai_warehouse_ui_sa" {
+  type        = string
+  description = "The Document AI Warehouse UI service account email address."
+}

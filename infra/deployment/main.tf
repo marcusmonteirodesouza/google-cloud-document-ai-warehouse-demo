@@ -30,6 +30,7 @@ module "iam" {
   default_internal_crypto_key_id   = module.kms.default_internal_crypto_key_id
   default_restricted_crypto_key_id = module.kms.default_restricted_crypto_key_id
   doc_ai_public_crypto_key_id      = module.kms.doc_ai_public_crypto_key_id
+  doc_ai_warehouse_ui_sa           = var.doc_ai_warehouse_ui_sa
 }
 
 module "doc_ai" {
@@ -51,4 +52,7 @@ module "cloud_function_us_patent_process" {
   default_internal_crypto_key_id      = module.kms.default_internal_crypto_key_id
   us_patent_parser_processor_id       = module.doc_ai.us_patent_parser_processor_id
   us_patent_parser_processor_location = module.doc_ai.us_patent_parser_processor_location
+  doc_ai_warehouse_region             = var.doc_ai_warehouse_region
+  doc_ai_warehouse_ui_sa              = var.doc_ai_warehouse_ui_sa
+  us_patent_document_schema_id        = var.us_patent_document_schema_id
 }
